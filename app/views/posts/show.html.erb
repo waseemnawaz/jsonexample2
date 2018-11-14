@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @post[0]["slug"] %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @post[0]["link"] %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @post[0]["title"]["rendered"] %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= image_tag(@post[0]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["large"]["source_url"]) %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
